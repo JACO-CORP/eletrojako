@@ -1,0 +1,5 @@
+CREATE TABLE acesso 
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    acesso VARCHAR(50)
+)
