@@ -1,5 +1,6 @@
 package com.eletrojako.controller;
 
+import java.io.Console;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,7 +42,8 @@ public class ProdutoController {
 	@PutMapping("/atualizar/{id}")
 	public Produto atualizarProduto(@PathVariable int id, Produto produto) {
 		produto.setId( (long) id);
-		
+
+
 		repository.save(produto);
 		
 		return produto;
