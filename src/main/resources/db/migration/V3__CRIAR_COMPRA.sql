@@ -1,0 +1,4 @@
+CREATE TABLE compra (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_produto INT NOT NULL
+);

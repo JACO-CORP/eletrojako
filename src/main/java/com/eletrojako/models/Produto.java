@@ -18,7 +18,7 @@ public class Produto {
 	public String nome;
 	
 	@Column(name = "descricao")
-	public String descricao;
+	public String descricao;	
 	
 	@Column(name = "valor_Unidade")
 	public float valor_Unidade;
