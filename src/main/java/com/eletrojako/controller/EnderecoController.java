@@ -31,7 +31,7 @@ public class EnderecoController {
     }
 
     @PutMapping("/atualizar/{id}")
-    public Endereco atualizarEndereco(@PathVariable int id, Endereco endereco) {
+    public Endereco atualizarEndereco(@PathVariable int id, @RequestBody Endereco endereco) {
         endereco.setId( (long) id);
 
         repository.save(endereco);

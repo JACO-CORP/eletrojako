@@ -45,7 +45,11 @@ public class CompraController {
 	public String criarCompra(@RequestBody Compra compra) {
 		Produto novo = produtoRepository.getOne(compra.getId_produto());
 		novo.setQuantidade_Estoque(novo.getQuantidade_Estoque() - 1);
-		
+
+		if (novo.getQuantidade_Estoque() < 0) {
+			return null;
+		}
+
 		produtoRepository.save(novo);
 		repository.save(compra);
 		

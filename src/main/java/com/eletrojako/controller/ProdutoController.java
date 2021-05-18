@@ -40,7 +40,7 @@ public class ProdutoController {
 	}
 	
 	@PutMapping("/atualizar/{id}")
-	public Produto atualizarProduto(@PathVariable int id, Produto produto) {
+	public Produto atualizarProduto(@PathVariable int id, @RequestBody Produto produto) {
 		produto.setId( (long) id);
 
 
